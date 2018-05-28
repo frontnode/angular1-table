@@ -1065,9 +1065,7 @@ function($scope, NgTableParams, $timeout, $parse, $compile, $attrs, $element, ng
     $scope.$watch('params.isDataReloadRequired()', onDataReloadStatusChange);
 
     this.compileDirectiveTemplates = function () {
-        var tableTemplate = $element.find('table').attr({
-          'ng-show':'$hasData'
-        });
+        var tableTemplate = $element.find('table');
 
         if (!$element.hasClass('os-table')) {
             compileNoDataTemplate($element);
